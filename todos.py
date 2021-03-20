@@ -1,13 +1,12 @@
 class TaskManager:
     def __init__(self):
-        self.tasks = [2]
+        self.tasks = ["First task", "Second task", "Third task"]
 
     def parse(self, command):
-        return Action("delete", command[2:])
+        return Action("add", command[2:])
 
 
 class Action:
     def __init__(self, name, description):
         self.name = name
         self.description = description
-
